@@ -14,7 +14,7 @@ float rand (in vec2 _st) {
 }
 void main() {
     vec2 st = gl_FragCoord.xy/u_resolution.xy;
-    float r = rand(gl_FragCoord.xy * 0.001); // static density
+    float r = rand(gl_FragCoord.xy * 0.001);
     st.x *= u_resolution.x/u_resolution.y;
     vec3 color = vec3(0.);
     color = vec3(st.x, st.y, abs(sin(u_time)));
